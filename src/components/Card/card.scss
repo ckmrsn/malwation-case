@@ -1,0 +1,8 @@
+@import '../../variables';
+.card {
+	flex: 1;
+	padding: 35px;
+	background-color: $cardscBackground;
+	border-radius: 50px;
+	display: flex;
+}

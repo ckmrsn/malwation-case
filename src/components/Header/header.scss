@@ -1,0 +1,70 @@
+@import '../../variables';
+
+.header {
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+	.logo {
+		font-size: 40px;
+		font-weight: 900;
+		margin-right: 80px;
+	}
+	.searchBar {
+		flex: 1;
+		width: max-content;
+		display: flex;
+		align-items: center;
+		position: relative;
+		.searchIcon {
+			position: absolute;
+			left: 10px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		input {
+			width: 300px;
+			border: none;
+			outline: none;
+			background-color: $cardscBackground;
+			padding: 10px 10px 10px 30px;
+			border-radius: 50px;
+		}
+	}
+	.options {
+		display: flex;
+		align-items: center;
+		margin-right: 50px;
+		.lang {
+			select {
+				border: none;
+				outline: none;
+				background-color: inherit;
+				cursor: pointer;
+				font-weight: 600;
+			}
+		}
+		.notification {
+			position: relative;
+			.round {
+				position: absolute;
+				top: 2px;
+				right: 4px;
+				width: 9px;
+				height: 9px;
+				border-radius: 50%;
+				background-color: red;
+			}
+			.notificationIcon {
+				font-size: 27px;
+			}
+		}
+	}
+	.avatar {
+		width: 50px;
+		img {
+			width: inherit;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+	}
+}

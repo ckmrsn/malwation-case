@@ -1,0 +1,54 @@
+@import '../../variables';
+
+.cardContentBody {
+	flex: 3;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	.contentBodyHeader {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		.title {
+			font-size: 15px;
+			font-weight: 800;
+		}
+		.options {
+			display: flex;
+			select {
+				border: 1px solid $grey1;
+				color: $grey1;
+				padding: 5px;
+				border-radius: 5px;
+				outline: none;
+				position: relative;
+			}
+			.optInfo {
+				display: flex;
+				align-items: center;
+				margin-left: 20px;
+				min-width: 50px;
+				justify-content: flex-end;
+				padding-right: 10px;
+				.optInfoLabel {
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+	.contentBodyList {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		max-height: 365px;
+		min-height: 365px;
+		height: 365px;
+		overflow: auto;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+}

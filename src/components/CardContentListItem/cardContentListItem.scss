@@ -1,0 +1,70 @@
+@import '../../variables';
+
+.cardContentListItem {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 5px;
+	font-size: 15px;
+	.item {
+		flex: 1;
+		display: flex;
+		justify-content: flex-start;
+	}
+	.icon {
+		font-size: 30px;
+		margin-right: 30px;
+	}
+	.title {
+		font-weight: 800;
+	}
+	.date {
+		font-weight: 400;
+		color: $grey1;
+		font-size: 12px;
+	}
+	.value {
+		font-weight: 800;
+	}
+	.option {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 10px;
+
+		cursor: pointer;
+		position: relative;
+		.optionIcon {
+			font-size: 20px;
+			width: auto;
+			height: auto;
+			border-radius: 15px;
+			padding: 5px;
+			&:hover {
+				background-color: $mainBackground;
+			}
+		}
+
+		.optionList {
+			position: absolute;
+			top: 0;
+			right: 30px;
+			font-size: 12px;
+			list-style: none;
+			border-radius: 20px;
+			background-color: black;
+			color: white;
+			width: max-content;
+			z-index: 9999;
+			li {
+				padding: 10px;
+				&:not(:last-child) {
+					border-bottom: 1px solid $grey1;
+				}
+			}
+		}
+	}
+	&:not(:last-child) {
+		border-bottom: 1px solid $grey1;
+	}
+}

@@ -1,0 +1,66 @@
+@import '../../variables';
+
+.creditCard {
+	width: 95%;
+	height: 180px;
+	color: white;
+	background: linear-gradient(
+		200deg,
+		rgba(31, 31, 31, 1) 0%,
+		rgba(47, 47, 47, 1) 100%
+	);
+	border-radius: 35px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 20px;
+	position: relative;
+	z-index: 10;
+	overflow: visible;
+	.shadow {
+		width: 95%;
+		height: 90%;
+		position: absolute;
+		bottom: -10px;
+		z-index: -1;
+		color: white;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: $shadow1;
+		border-radius: 50px;
+	}
+	.shadow2 {
+		width: 85%;
+		background-color: $shadow2;
+	}
+	.cardIcons {
+		padding-bottom: 10px;
+	}
+	.creditCardFooter {
+		flex: 1;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		.holderInfo {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-end;
+			text-align: left;
+			p {
+				font-size: 8px;
+				&:nth-child(2) {
+					font-size: 12px;
+				}
+			}
+		}
+		.cardType {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: space-around;
+			font-size: 12px;
+		}
+	}
+}

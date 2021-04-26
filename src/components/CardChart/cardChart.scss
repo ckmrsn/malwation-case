@@ -1,0 +1,165 @@
+@import '../../variables';
+
+.cardChart {
+	flex: 2;
+	background-color: $cardTheme;
+	border-radius: 50px;
+	padding: 40px 0;
+	color: $grey1;
+	position: relative;
+	font-size: 14px;
+	display: flex;
+	flex-direction: column;
+	.chartOption {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		color: $black1;
+		right: 25px;
+		top: 25px;
+		cursor: pointer;
+		.icon {
+			font-size: 25px;
+			width: auto;
+			height: auto;
+			padding: 5px;
+			border-radius: 50%;
+			&:hover {
+				background-color: $mainBackground;
+			}
+		}
+		ul {
+			position: absolute;
+			top: 0;
+			right: 50px;
+			display: flex;
+			flex-direction: column;
+			width: max-content;
+			color: white;
+			list-style: none;
+			background-color: $black1;
+			border-radius: 10px;
+			li {
+				color: white;
+				padding: 10px;
+				&:not(:last-child) {
+					border-bottom: 1px solid $grey1;
+				}
+			}
+		}
+	}
+	.chartHeader {
+		p {
+			color: $black1;
+			font-size: 30px;
+			font-weight: 900;
+			margin-top: 10px;
+		}
+	}
+	ul {
+		list-style: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 15px;
+		li {
+			margin: 0 10px;
+			cursor: pointer;
+			user-select: none;
+			color: $grey1;
+			font-weight: 700;
+			&[active='true'] {
+				color: $black1;
+			}
+		}
+	}
+	.chart {
+		padding-top: 30px;
+		.customTick {
+			position: relative;
+			padding: 7px;
+			width: max-content;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transform: translateX(-50%);
+			cursor: pointer;
+			border-radius: 20px;
+		}
+		.activeTick {
+			background-color: black;
+			color: white;
+		}
+		.recharts-cartesian-axis-tick-line {
+			stroke: transparent;
+		}
+	}
+	.planInformation {
+		position: relative;
+		flex: 1;
+		padding: 40px;
+		padding-bottom: 0;
+		display: flex;
+		border-radius: 50px;
+		align-items: center;
+		align-items: flex-end;
+		color: $cardscBackground;
+		user-select: none;
+		.planCard {
+			width: 100%;
+			background-color: $black1;
+			border-radius: 50px;
+			display: flex;
+			padding: 10px 20px;
+			justify-content: space-around;
+			align-items: center;
+			position: relative;
+			overflow: visible;
+			z-index: 1;
+			p {
+				padding: 2.5px 0;
+				font-size: 14px;
+				&:nth-child(2) {
+					font-weight: 800;
+					font-size: 18px;
+				}
+			}
+			.shadow {
+				width: 90%;
+				height: 90%;
+				position: absolute;
+				top: -10px;
+				margin: 0 auto;
+				z-index: -1;
+				color: white;
+				background-color: $shadow1;
+				border-radius: 50px;
+				display: flex;
+				justify-content: center;
+			}
+			.shadow2 {
+				background-color: $shadow2;
+			}
+			.shadow3 {
+				background-color: $shadow3;
+			}
+
+			.progressBar {
+				width: 120px;
+				height: 120px;
+				display: flex;
+				overflow: hidden;
+				justify-content: center;
+				align-items: center;
+				color: white;
+				padding-top: 10px;
+				.indicator {
+					position: absolute;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}

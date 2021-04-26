@@ -1,0 +1,14 @@
+@import '../../variables';
+
+.cardContainer {
+	width: 1250px;
+	min-width: 1250px;
+	height: 900px;
+	min-height: 900px;
+	border-radius: 50px;
+	background-color: $cardTheme;
+	box-shadow: 0px 0px 200px 10px #cbced1;
+	padding: 35px;
+	display: flex;
+	flex-direction: column;
+}
